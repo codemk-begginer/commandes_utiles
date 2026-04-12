@@ -75,4 +75,11 @@
 
 ```bash
         git diff main
-```    
+```
+
+### supprimer un fichier de la gestion de version de git 
+```shell
+    git rm --cached .env.development
+```
+
+ https://github.com/codemk-begginer/positions_unit_test.git

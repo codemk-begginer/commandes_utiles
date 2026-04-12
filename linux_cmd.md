@@ -66,7 +66,7 @@
      lsblk -f
 ```
 
-###changer le proprietaire d'une partition et son groupe  
+###changer le proprietaire d'une partition et son groupe. le -R permet d'affecter egalements les sous dossiers et fichiers au meme groupe et aux meme usrs
 ```bash 
     sudo chown -R stevemk:stevemk /media/stevemk/3C56-D97B
 ```
@@ -97,4 +97,33 @@
 ### generer un mot de passe random avec openssl
 ```bash
   openssl rand -base64 32
+```
+
+### changer le proprietaire d'une fichier et son groupe
+```shell
+   chown patrick:amis rapport.txt
+```
+
+### modifier des droit sur tous les fichiers .html en utilisant des chiffres. le -R permet d'affecter egalement les droits aux sous dossiers et fichiers
+```bash
+   chmod 777 *.html
+   chmod -R 777 /home/stevemk/Desktop/Test
+```
+### modifier les droit sur tous les fichier .html en utilisant des lettres
+```bash
+   chmod g-wx,o-rwx *.html
+```
+
+### afficher les allias
+```bash
+   alias
+```
+### definir un alias sur ne commande (dans le fichier bashrc)
+```bash
+  alias rm='rm --preserve-root'
+```
+
+### rechercher un package dans la liste disponible en cache
+```bash
+  apt-cache search breakout
 ```

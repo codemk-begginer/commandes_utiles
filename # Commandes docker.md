@@ -220,6 +220,31 @@ docker push <repository>
  docker push username_docker_hub/image_name:1.0
 ```
 
+### creer un reseau docker externe 
+```bash
+    docker network create applications-network
+```
+
+### Afficher les logs d'un conteneur docker depuis le terminal
+```bash
+      docker logs <nom du conteneur>
+```
+### Exporter une base de donnees  spécifique dans un containner docker
+```bash
+     docker exec -t postgres_db \
+     pg_dump -U postgres nom_base > dump.sql
+```
+
+** docker exec → exécute une commande dans le conteneur **
+
+** pg_dump → outil natif PostgreSQL **
+
+** -U postgres → utilisateur **
+
+** nom_base → base à exporter **
+
+** > dump.sql → redirection vers ton système hôte **
+
 
 
 
